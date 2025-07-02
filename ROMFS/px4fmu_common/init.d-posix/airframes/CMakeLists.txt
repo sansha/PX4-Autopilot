@@ -83,7 +83,6 @@ px4_add_romfs_files(
 	4012_gz_rover_ackermann
 	4013_gz_x500_lidar_2d
 	4014_gz_x500_mono_cam_down
-	4015_gz_r1_rover_mecanum
 	4016_gz_x500_lidar_down
 	4017_gz_x500_lidar_front
 	4018_gz_quadtailsitter
@@ -114,6 +113,7 @@ px4_add_romfs_files(
 	17002_flightgear_tf-g2
 
 	50000_gz_rover_differential
+	52000_gz_rover_mecanum
 
 	71002_gz_spacecraft_2d
 
