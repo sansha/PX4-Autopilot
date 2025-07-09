@@ -10,15 +10,15 @@ uint8 ACTION_DISARM = 0 # Disarm vehicle
 uint8 ACTION_ARM = 1 # Arm vehicle
 uint8 ACTION_TOGGLE_ARMING = 2 # Toggle arming
 uint8 ACTION_UNKILL = 3 # Revert a kill action
-uint8 ACTION_KILL = 4 # Kill vehicle (activate flight termination)
+uint8 ACTION_KILL = 4 # Kill vehicle (instantly stop the motors)
 uint8 ACTION_SWITCH_MODE = 5 # Switch mode. The target mode is set in the `mode` field.
-uint8 ACTION_VTOL_TRANSITION_TO_MULTICOPTER = 6 # Transition to multicopter
-uint8 ACTION_VTOL_TRANSITION_TO_FIXEDWING = 7 # Transition to fixed-wing
+uint8 ACTION_VTOL_TRANSITION_TO_MULTICOPTER = 6 # Transition to hover flight
+uint8 ACTION_VTOL_TRANSITION_TO_FIXEDWING = 7 # Transition to fast forward flight
 
 uint8 source # [@enum SOURCE] Request trigger type, such as a switch, button or gesture.
-uint8 SOURCE_STICK_GESTURE = 0 # Gesture trigger
-uint8 SOURCE_RC_SWITCH = 1 # RC switch trigger
-uint8 SOURCE_RC_BUTTON = 2 # RC button trigger
-uint8 SOURCE_RC_MODE_SLOT = 3 # RC mode slot trigger
+uint8 SOURCE_STICK_GESTURE = 0 # Triggered by holding the sticks in a certain position
+uint8 SOURCE_RC_SWITCH = 1 # Triggered by an RC switch moving into a certain position
+uint8 SOURCE_RC_BUTTON = 2 # Triggered by a momentary button on the RC being pressed or held
+uint8 SOURCE_RC_MODE_SLOT = 3 # Mode change through the RC mode selection mechanism
 
 uint8 mode # Requested mode. Only applies when `action` is `ACTION_SWITCH_MODE`. Modes values are set in `vehicle_status_s::NAVIGATION_STATE_*`.
