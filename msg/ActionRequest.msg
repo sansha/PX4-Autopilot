@@ -1,6 +1,6 @@
-# Action request from a manual controller.
+# Action request for the vehicle's main state
 #
-# Messages represents actions requested by an RC manual controller switch or gesture, such as a request to ARM or switch mode.
+# Message represents actions requested by a PX4 internal component towards the main state machine such as a request to arm or switch mode.
 # Request are published by `manual_control` and subscribed by the `commander` and `vtol_att_control` modules.
 
 uint64 timestamp # [us] Time since system start
