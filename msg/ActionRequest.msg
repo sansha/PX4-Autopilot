@@ -21,4 +21,4 @@ uint8 SOURCE_RC_SWITCH = 1 # Triggered by an RC switch moving into a certain pos
 uint8 SOURCE_RC_BUTTON = 2 # Triggered by a momentary button on the RC being pressed or held
 uint8 SOURCE_RC_MODE_SLOT = 3 # Mode change through the RC mode selection mechanism
 
-uint8 mode # Requested mode. Only applies when `action` is `ACTION_SWITCH_MODE`. Modes values are set in `vehicle_status_s::NAVIGATION_STATE_*`.
+uint8 mode # Requested mode. Only applies when `action` is `ACTION_SWITCH_MODE`. Values for this field are defined by the `vehicle_status_s::NAVIGATION_STATE_*` enumeration.
