@@ -27,6 +27,9 @@ if param compare SENS_EN_INA226 1
 then
 	# Start Digital power monitors
 	ina228 -X -b 1 -t 1 -k start
+
+	# Disable analog monitoring
+	param set BAT1_V_CHANNEL -2
 fi
 
 
@@ -34,12 +37,18 @@ if param compare SENS_EN_INA228 1
 then
 	# Start Digital power monitors
 	ina228 -X -b 1 -t 1 -k start
+
+	# Disable analog monitoring
+	param set BAT1_V_CHANNEL -2
 fi
 
 if param compare SENS_EN_INA238 1
 then
 	# Start Digital power monitors
 	ina238 -X -b 1 -t 1 -k start
+
+	# Disable analog monitoring
+	param set BAT1_V_CHANNEL -2
 fi
 
 
