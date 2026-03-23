@@ -185,15 +185,15 @@ bool UxrceddsClient::init()
 
 void UxrceddsClient::deinit()
 {
-	if (_fd >= 0) {
-		close(_fd);
-		_fd = -1;
-	}
-
 	if (_transport_serial) {
 		uxr_close_serial_transport(_transport_serial);
 		delete _transport_serial;
 		_transport_serial = nullptr;
+		_fd = -1;  // fd was closed by uxr_close_serial_transport
+
+	} else if (_fd >= 0) {
+		close(_fd);
+		_fd = -1;
 	}
 
 #if defined(UXRCE_DDS_CLIENT_UDP)
